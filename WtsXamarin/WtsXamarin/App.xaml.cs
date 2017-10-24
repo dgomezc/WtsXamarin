@@ -1,5 +1,4 @@
-﻿using WtsXamarin.Views;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace WtsXamarin
 {
@@ -9,7 +8,7 @@ namespace WtsXamarin
 		{
 			InitializeComponent();
 
-			MainPage = new BlankPage();
+			MainPage = new WtsXamarin.Views.Navigation.MasterDetailPage();
 		}
 
 		protected override void OnStart ()

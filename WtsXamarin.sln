@@ -15,6 +15,7 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		WtsXamarin\WtsXamarin\WtsXamarin.projitems*{70223800-fcf1-44e4-a1e1-675481186483}*SharedItemsImports = 13
 		WtsXamarin\WtsXamarin\WtsXamarin.projitems*{7151446d-e0da-47b1-aaad-beec6215351d}*SharedItemsImports = 4
+		WtsXamarin\WtsXamarin\WtsXamarin.projitems*{b76e2ac1-2a61-4e1b-aa5b-a4ba8987e996}*SharedItemsImports = 4
 		WtsXamarin\WtsXamarin\WtsXamarin.projitems*{ee15f649-bdae-41e9-9519-2c24c6bc2a53}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
