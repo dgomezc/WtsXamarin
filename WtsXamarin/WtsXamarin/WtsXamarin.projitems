@@ -14,11 +14,13 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Observable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SampleOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ISettingsService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\NavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SampleDataService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BlankViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ListViewViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Navigation\MasterDetailPageMasterViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\WebViewViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BlankPage.xaml.cs">
       <DependentUpon>BlankPage.xaml</DependentUpon>
@@ -37,6 +39,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Navigation\MasterDetailPageMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\WebViewPage.xaml.cs">
@@ -76,6 +82,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ListViewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

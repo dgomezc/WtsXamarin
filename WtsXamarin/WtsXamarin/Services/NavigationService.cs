@@ -13,6 +13,7 @@ namespace WtsXamarin.Services
             new MasterDetailPageMenuItem { Id = 0, Title = "Blank", TargetType = typeof(BlankPage)},
             new MasterDetailPageMenuItem { Id = 1, Title = "WebView", TargetType = typeof(WebViewPage)},
             new MasterDetailPageMenuItem { Id = 2, Title = "ListView", TargetType = typeof(ListViewPage) },
+            new MasterDetailPageMenuItem { Id = 3, Title = "Settings", TargetType = typeof(SettingsPage) },
         };    
     }
 }
