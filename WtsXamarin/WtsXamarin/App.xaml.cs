@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using WtsXamarin.Views;
 using Xamarin.Forms;
 
 namespace WtsXamarin
@@ -13,7 +9,7 @@ namespace WtsXamarin
 		{
 			InitializeComponent();
 
-			MainPage = new WtsXamarin.MainPage();
+			MainPage = new BlankPage();
 		}
 
 		protected override void OnStart ()
