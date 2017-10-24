@@ -15,6 +15,7 @@ namespace WtsXamarin.ViewModels.Navigation
             {
                 new MasterDetailPageMenuItem { Id = 0, Title = "Blank", TargetType = typeof(BlankPage) },
                 new MasterDetailPageMenuItem { Id = 0, Title = "WebView", TargetType = typeof(WebViewPage) },
+                new MasterDetailPageMenuItem { Id = 0, Title = "ListView", TargetType = typeof(ListViewPage) },
             });
         }
     }
