@@ -30,8 +30,6 @@ namespace WtsXamarin.Views.Navigation
 
             Detail = new NavigationPage(page);
             IsPresented = false;
-
-            MasterPage.ListView.SelectedItem = null;
         }
     }
 }
