@@ -14,6 +14,7 @@ namespace WtsXamarin.ViewModels.Navigation
             MenuItems = new ObservableCollection<MasterDetailPageMenuItem>(new[]
             {
                 new MasterDetailPageMenuItem { Id = 0, Title = "Blank", TargetType = typeof(BlankPage) },
+                new MasterDetailPageMenuItem { Id = 0, Title = "WebView", TargetType = typeof(WebViewPage) },
             });
         }
     }
