@@ -8,13 +8,17 @@ namespace WtsXamarin.Services
 {
     public static class NavigationService
     {
-        public static IEnumerable<MasterDetailPageMenuItem> NavigationItems = new[]
+        public static IEnumerable<MasterDetailPageMenuItem> PrimaryNavigationItems = new[]
         {
             new MasterDetailPageMenuItem { Id = 0, Title = "Main", TargetType = typeof(MainPage)},
             new MasterDetailPageMenuItem { Id = 1, Title = "Blank", TargetType = typeof(BlankPage)},
             new MasterDetailPageMenuItem { Id = 2, Title = "WebView", TargetType = typeof(WebViewPage)},
             new MasterDetailPageMenuItem { Id = 3, Title = "ListView", TargetType = typeof(ListViewPage) },
+        };
+
+        public static IEnumerable<MasterDetailPageMenuItem> SecondaryNavigationItems = new[]
+        {
             new MasterDetailPageMenuItem { Id = 4, Title = "Settings", TargetType = typeof(SettingsPage) },
-        };    
+        };
     }
 }

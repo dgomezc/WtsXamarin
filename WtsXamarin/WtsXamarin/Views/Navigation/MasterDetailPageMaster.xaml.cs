@@ -7,14 +7,16 @@ namespace WtsXamarin.Views.Navigation
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterDetailPageMaster : ContentPage
     {
-        public ListView ListView;
+        public ListView PrimaryListView;
+        public ListView SecondaryListView;
 
         public MasterDetailPageMaster()
         {
             InitializeComponent();
 
             BindingContext = new MasterDetailPageMasterViewModel();
-            ListView = MenuItemsListView;
+            PrimaryListView = PrimaryMenuItemsListView;
+            SecondaryListView = SecondaryMenuItemsListView;
         }
     }
 }
