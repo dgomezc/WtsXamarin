@@ -2,14 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WtsXamarin.Views.SettingsPage"
+             xmlns:controls="clr-namespace:WtsXamarin.Controls"
              Title="Settings">
     <ContentPage.Content>
         <ScrollView Margin="10, 0">
             <StackLayout>
-                <Label Text="Program Information"
+                <Label Text="About this application"
                    Style="{DynamicResource TitleStyle}" />
                 <Label Text="{Binding AppName}" />
-                <Label Text="{Binding AppVersion}" />
+                <Label Text="{Binding AboutDescription}" />
+                <controls:LinkLabel Text="Privacy Statement"
+                               Link="{Binding PrivacyTermsLink}"
+                               TextColor="Blue" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

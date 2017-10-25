@@ -9,13 +9,14 @@ namespace WtsXamarin.ViewModels
         public SettingsViewModel()
         {
             var service = DependencyService.Get<ISettingsService>();
-
-            AppName = service.AppName;
-            AppVersion = $"Version - {service.AppVersion}";
+            AppName = $"{service.AppName} - {service.AppVersion}";
         }
 
-        public string AppName { get; private set; }
+        public string AppName { get; }
 
-        public string AppVersion { get; private set; }
+        public string AboutDescription => "Settings page placeholder text.  Your app description goes here.";
+
+        public string PrivacyTermsLink => @"https://YourPrivacyUrlGoesHere/";
+
     }
 }
