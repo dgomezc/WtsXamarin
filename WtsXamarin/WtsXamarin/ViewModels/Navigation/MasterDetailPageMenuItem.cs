@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 
 namespace WtsXamarin.Views.Navigation
 {
@@ -7,5 +8,6 @@ namespace WtsXamarin.Views.Navigation
         public int Id { get; set; }
         public string Title { get; set; }
         public Type TargetType { get; set; }
+        public string IconSource { get; set; }
     }
 }

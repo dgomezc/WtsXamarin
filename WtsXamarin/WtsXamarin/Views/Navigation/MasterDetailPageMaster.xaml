@@ -26,12 +26,18 @@
             </ContentView>
             <DataTemplate x:Key="MenuItemTemplate">
                 <ViewCell>
-                    <StackLayout Padding="15,10" HorizontalOptions="FillAndExpand">
-                        <Label VerticalOptions="FillAndExpand" 
-                        VerticalTextAlignment="Center" 
-                        Text="{Binding Title}" 
-                        FontSize="Default"/>
-                    </StackLayout>
+                    <Grid Padding="5,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding IconSource}" />
+                        <Label Grid.Column="1" 
+                               VerticalTextAlignment="Center"
+                               Text="{Binding Title}" 
+                               VerticalOptions="FillAndExpand"
+                               FontSize="Default" />
+                    </Grid>
                 </ViewCell>
             </DataTemplate>
         </ResourceDictionary>
