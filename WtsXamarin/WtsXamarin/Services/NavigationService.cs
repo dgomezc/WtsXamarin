@@ -10,10 +10,11 @@ namespace WtsXamarin.Services
     {
         public static IEnumerable<MasterDetailPageMenuItem> NavigationItems = new[]
         {
-            new MasterDetailPageMenuItem { Id = 0, Title = "Blank", TargetType = typeof(BlankPage)},
-            new MasterDetailPageMenuItem { Id = 1, Title = "WebView", TargetType = typeof(WebViewPage)},
-            new MasterDetailPageMenuItem { Id = 2, Title = "ListView", TargetType = typeof(ListViewPage) },
-            new MasterDetailPageMenuItem { Id = 3, Title = "Settings", TargetType = typeof(SettingsPage) },
+            new MasterDetailPageMenuItem { Id = 0, Title = "Main", TargetType = typeof(MainPage)},
+            new MasterDetailPageMenuItem { Id = 1, Title = "Blank", TargetType = typeof(BlankPage)},
+            new MasterDetailPageMenuItem { Id = 2, Title = "WebView", TargetType = typeof(WebViewPage)},
+            new MasterDetailPageMenuItem { Id = 3, Title = "ListView", TargetType = typeof(ListViewPage) },
+            new MasterDetailPageMenuItem { Id = 4, Title = "Settings", TargetType = typeof(SettingsPage) },
         };    
     }
 }

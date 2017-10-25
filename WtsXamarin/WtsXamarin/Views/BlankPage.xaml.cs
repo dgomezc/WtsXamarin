@@ -10,9 +10,7 @@ namespace WtsXamarin.Views
         public BlankPage()
         {
             InitializeComponent();
-            BindingContext = ViewModel;
+            BindingContext = new BlankViewModel();
         }
-
-        public BlankViewModel ViewModel { get; } = new BlankViewModel();
     }
 }
