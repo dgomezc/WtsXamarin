@@ -2,10 +2,10 @@
 using WtsXamarin.iOS.Services;
 using WtsXamarin.Services;
 
-[assembly: Xamarin.Forms.Dependency(typeof(SettingsService))]
+[assembly: Xamarin.Forms.Dependency(typeof(PlatformService))]
 namespace WtsXamarin.iOS.Services
 {
-    public class SettingsService : ISettingsService
+    public class PlatformInfoService : IPlatformService
     {
         public string AppName => NSBundle.MainBundle.InfoDictionary["CFBundleName"].ToString();
 

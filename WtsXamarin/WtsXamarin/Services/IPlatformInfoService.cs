@@ -1,6 +1,6 @@
 ﻿namespace WtsXamarin.Services
 {
-    public interface ISettingsService
+    public interface IPlatformInfoService
     {
         string AppName { get; }
         string AppVersion { get; }

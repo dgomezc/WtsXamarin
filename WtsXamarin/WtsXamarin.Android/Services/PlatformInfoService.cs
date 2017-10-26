@@ -3,10 +3,10 @@ using Android.Content.PM;
 using WtsXamarin.Droid.Services;
 using WtsXamarin.Services;
 
-[assembly: Xamarin.Forms.Dependency(typeof(SettingsService))]
+[assembly: Xamarin.Forms.Dependency(typeof(PlatformInfoService))]
 namespace WtsXamarin.Droid.Services
 {
-    public class SettingsService : ISettingsService
+    public class PlatformInfoService : IPlatformInfoService
     {
         private static PackageInfo info = Application.Context.PackageManager.GetPackageInfo(
             Application.Context.PackageName,

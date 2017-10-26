@@ -2,10 +2,10 @@
 using WtsXamarin.Services;
 using WtsXamarin.UWP.Services;
 
-[assembly: Xamarin.Forms.Dependency(typeof(SettingsService))]
+[assembly: Xamarin.Forms.Dependency(typeof(PlatformInfoService))]
 namespace WtsXamarin.UWP.Services
 {
-    public class SettingsService : ISettingsService
+    public class PlatformInfoService : IPlatformInfoService
     {
         public string AppName => Package.Current.DisplayName;
 

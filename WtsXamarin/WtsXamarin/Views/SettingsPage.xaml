@@ -5,16 +5,24 @@
              xmlns:controls="clr-namespace:WtsXamarin.Controls"
              Title="Settings">
     <ContentPage.Content>
-        <ScrollView Margin="10, 0">
+        <ScrollView Margin="10">
             <StackLayout>
-                <Label Text="About this application"
+                <StackLayout>
+                    <Label Text="Personalization"
                    Style="{DynamicResource SubtitleStyle}" />
-                <Label Text="{Binding AppName}" />
-                <Label Text="{Binding AboutDescription}" />
-                <controls:LinkLabel Text="Privacy Statement"
+                    <controls:CheckBox Text="Boolean Program Setting"
+                              IsChecked="{Binding SampleBoolSetting}" />
+                </StackLayout>
+                <StackLayout Margin="0,10">
+                    <Label Text="About this application"
+                   Style="{DynamicResource SubtitleStyle}" />
+                    <Label Text="{Binding AppName}" />
+                    <Label Text="{Binding AboutDescription}" />
+                    <controls:LinkLabel Text="Privacy Statement"
                                Link="{Binding PrivacyTermsLink}"
                                TextColor="Blue" />
-            </StackLayout>
+                </StackLayout>
+            </StackLayout>            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
