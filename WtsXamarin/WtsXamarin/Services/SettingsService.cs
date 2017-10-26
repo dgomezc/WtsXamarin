@@ -3,6 +3,7 @@ using Plugin.Settings.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using WtsXamarin.Models;
 using Xamarin.Forms;
 
 namespace WtsXamarin.Services
@@ -27,6 +28,12 @@ namespace WtsXamarin.Services
         {
             get => _appSettings.GetValueOrDefault(nameof(SampleBoolSetting), false);
             set => _appSettings.AddOrUpdateValue(nameof(SampleBoolSetting), value);
-        }        
+        }
+
+        public SampleProgramOptions SampleEnumSetting
+        {
+            get => (SampleProgramOptions)_appSettings.GetValueOrDefault(nameof(SampleEnumSetting), 0);
+            set => _appSettings.AddOrUpdateValue(nameof(SampleEnumSetting), (int)value);
+        }
     }
 }

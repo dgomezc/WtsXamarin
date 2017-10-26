@@ -1,6 +1,6 @@
 ﻿using WtsXamarin.Helpers;
 using WtsXamarin.Services;
-using Xamarin.Forms;
+using WtsXamarin.Models;
 
 namespace WtsXamarin.ViewModels
 {
@@ -23,6 +23,16 @@ namespace WtsXamarin.ViewModels
             {
                 SettingsService.Instance.SampleBoolSetting = value;
                 OnPropertyChanged(nameof(SampleBoolSetting));
+            }
+        }
+
+        public SampleProgramOptions SampleEnumSetting
+        {
+            get => SettingsService.Instance.SampleEnumSetting;
+            set
+            {
+                SettingsService.Instance.SampleEnumSetting = value;
+                OnPropertyChanged(nameof(SampleEnumSetting));
             }
         }
     }

@@ -25,6 +25,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Observable.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SampleOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SampleProgramOptions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IPlatformInfoService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\NavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SampleDataService.cs" />
