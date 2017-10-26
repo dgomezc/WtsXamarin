@@ -8,7 +8,7 @@
         <ScrollView Margin="10, 0">
             <StackLayout>
                 <Label Text="About this application"
-                   Style="{DynamicResource TitleStyle}" />
+                   Style="{DynamicResource SubtitleStyle}" />
                 <Label Text="{Binding AppName}" />
                 <Label Text="{Binding AboutDescription}" />
                 <controls:LinkLabel Text="Privacy Statement"
