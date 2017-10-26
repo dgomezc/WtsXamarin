@@ -10,9 +10,7 @@ namespace WtsXamarin.Views
 		public SettingsPage ()
 		{
 			InitializeComponent ();
-            BindingContext = ViewModel;
+            BindingContext = new SettingsViewModel();
         }
-
-        public SettingsViewModel ViewModel { get; } = new SettingsViewModel();
     }
 }

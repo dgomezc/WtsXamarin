@@ -7,18 +7,17 @@ namespace WtsXamarin.ViewModels
 {
     public class WebViewViewModel : Observable
     {
-        protected const string DefaultUrl = "https://developer.microsoft.com/en-us/windows/apps";
+        private const string DefaultUrl = "https://developer.microsoft.com/en-us/windows/apps";
         
         private WebView _webView;
         private WebViewSource _source;
         private bool _canGoBack, _canGoForward;
 
-        public WebViewViewModel()
+        public WebViewViewModel(WebView webView)
         {
-            Source = new UrlWebViewSource
-            {
-                Url = DefaultUrl
-            };
+            _webView = webView;
+
+            Source = new UrlWebViewSource { Url = DefaultUrl };
 
             GoBack = new Command(
                 canExecute: () => CanGoBack,
@@ -42,18 +41,13 @@ namespace WtsXamarin.ViewModels
 
         public WebViewSource Source
         {
-            set
-            {
-                Set(ref _source, value);
-            }
-            get
-            {
-                return _source;
-            }
+            get => _source;
+            set => Set(ref _source, value);
         }
 
         public bool CanGoBack
         {
+            get => _canGoBack;
             set
             {
                 if (Set(ref _canGoBack, value))
@@ -61,14 +55,11 @@ namespace WtsXamarin.ViewModels
                     (GoBack as Command).ChangeCanExecute();
                 }
             }
-            get
-            {
-                return _canGoBack;
-            }
         }
 
         public bool CanGoForward
         {
+            get => _canGoForward;
             set
             {
                 if (Set(ref _canGoForward, value))
@@ -76,15 +67,6 @@ namespace WtsXamarin.ViewModels
                     (GoForward as Command).ChangeCanExecute();
                 }
             }
-            get
-            {
-                return _canGoForward;
-            }
-        }
-
-        public void Initialize(WebView webView)
-        {
-            _webView = webView;
         }
     }
 }

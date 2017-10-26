@@ -10,10 +10,7 @@ namespace WtsXamarin.Views
 		public WebViewPage ()
 		{
 			InitializeComponent ();
-            ViewModel.Initialize(webView);
-            BindingContext = ViewModel;
+            BindingContext = new WebViewViewModel(webView);
         }
-
-        public WebViewViewModel ViewModel { get; } = new WebViewViewModel();
     }
 }

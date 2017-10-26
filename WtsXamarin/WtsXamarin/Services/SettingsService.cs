@@ -11,17 +11,18 @@ namespace WtsXamarin.Services
     public class SettingsService
     {
         private ISettings _appSettings = CrossSettings.Current;
-
-        private IPlatformInfoService _platformService = DependencyService.Get<IPlatformInfoService>();
-
+        private IPlatformInfoService _platformService;
         private static SettingsService _instance;
+
         public static SettingsService Instance => _instance ?? (_instance = new SettingsService());
         
         private SettingsService()
         {
+            _platformService = DependencyService.Get<IPlatformInfoService>();
         }
 
         public string AppName => _platformService.AppName;
+
         public string AppVersion => _platformService.AppVersion;
 
         public bool SampleBoolSetting

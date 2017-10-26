@@ -18,27 +18,14 @@ namespace WtsXamarin.ViewModels
 
         public ObservableCollection<SampleOrder> SampleData
         {
-            private set
-            {
-                Set(ref _sampleData, value);
-            }
-
-            get
-            {
-                return _sampleData;
-            }
+            get => _sampleData;
+            private set => Set(ref _sampleData, value);
         }
 
         public SampleOrder SelectedItem
         {
-            set
-            {
-                Set(ref _selectedItem, value);
-            }
-            get
-            {
-                return _selectedItem;
-            }
+            get => _selectedItem;
+            set => Set(ref _selectedItem, value);
         }
     }
 }

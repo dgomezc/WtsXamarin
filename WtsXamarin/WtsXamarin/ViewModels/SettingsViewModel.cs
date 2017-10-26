@@ -10,11 +10,11 @@ namespace WtsXamarin.ViewModels
         {
         }
 
-        public string AppName => $"{SettingsService.Instance.AppName} - {SettingsService.Instance.AppVersion}";
+        public string AppName { get; } = $"{SettingsService.Instance.AppName} - {SettingsService.Instance.AppVersion}";
 
-        public string AboutDescription => "Settings page placeholder text. Your app description goes here.";
+        public string AboutDescription { get; } = "Settings page placeholder text. Your app description goes here.";
 
-        public string PrivacyTermsLink => @"https://YourPrivacyUrlGoesHere/";
+        public string PrivacyTermsLink { get; } = @"https://YourPrivacyUrlGoesHere/";
 
         public bool SampleBoolSetting
         {

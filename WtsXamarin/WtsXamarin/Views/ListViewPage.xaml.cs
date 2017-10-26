@@ -10,9 +10,7 @@ namespace WtsXamarin.Views
 		public ListViewPage()
 		{
 			InitializeComponent();
-            BindingContext = ViewModel;
+            BindingContext = new ListViewViewModel();
         }
-
-        public ListViewViewModel ViewModel { get; } = new ListViewViewModel();
     }
 }

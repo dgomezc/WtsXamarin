@@ -4,8 +4,10 @@
              x:Class="WtsXamarin.Views.MainPage"
              Title="Main">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding MainText}"
+        <StackLayout Margin="20">
+            <Label Text="{Binding MainText}" 
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>

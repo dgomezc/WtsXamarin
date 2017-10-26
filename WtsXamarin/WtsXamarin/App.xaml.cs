@@ -8,7 +8,7 @@ namespace WtsXamarin
 		{
 			InitializeComponent();
 
-			MainPage = new WtsXamarin.Views.Navigation.MasterDetailPage();
+			MainPage = new Views.Navigation.MasterDetailPage();
 		}
 
 		protected override void OnStart ()
