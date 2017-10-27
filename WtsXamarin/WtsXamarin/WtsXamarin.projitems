@@ -27,7 +27,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\IPlatformInfoService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\NavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\SettingsService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BlankViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ListViewViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Navigation\MasterDetailPageMasterViewModel.cs" />

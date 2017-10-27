@@ -2,13 +2,12 @@
 using Xamarin.Forms;
 using System.Windows.Input;
 using WtsXamarin.Core.Helpers;
+using WtsXamarin.Core.ViewModels;
 
 namespace WtsXamarin.ViewModels
 {
-    public class WebViewViewModel : Observable
-    {
-        private const string DefaultUrl = "https://developer.microsoft.com/en-us/windows/apps";
-        
+    public class WebViewViewModel : WebViewViewModelBase
+    {        
         private WebView _webView;
         private WebViewSource _source;
         private bool _canGoBack, _canGoForward;

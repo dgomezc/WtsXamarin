@@ -1,20 +1,21 @@
 ﻿using WtsXamarin.Core.Helpers;
 using WtsXamarin.Services;
 using WtsXamarin.Models;
+using WtsXamarin.Core.ViewModels;
 
 namespace WtsXamarin.ViewModels
 {
-    public class SettingsViewModel : Observable
+    public class SettingsViewModel : SettingsViewModelBase
     {
         public SettingsViewModel()
         {
         }
 
-        public string AppName { get; } = $"{SettingsService.Instance.AppName} - {SettingsService.Instance.AppVersion}";
+        public override string AppName { get; } = $"{SettingsService.Instance.AppName} - {SettingsService.Instance.AppVersion}";
 
-        public string AboutDescription { get; } = "Settings page placeholder text. Your app description goes here.";
+        public override string AboutDescription { get; } = "Settings page placeholder text. Your app description goes here.";
 
-        public string PrivacyTermsLink { get; } = @"https://YourPrivacyUrlGoesHere/";
+        public override string PrivacyTermsLink { get; } = @"https://YourPrivacyUrlGoesHere/";
 
         public bool SampleBoolSetting
         {

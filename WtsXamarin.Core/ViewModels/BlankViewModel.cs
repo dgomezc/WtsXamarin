@@ -1,6 +1,6 @@
 ﻿using WtsXamarin.Core.Helpers;
 
-namespace WtsXamarin.ViewModels
+namespace WtsXamarin.Core.ViewModels
 {
     public class BlankViewModel : Observable
     {

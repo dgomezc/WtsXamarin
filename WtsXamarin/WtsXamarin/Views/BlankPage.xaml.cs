@@ -1,10 +1,10 @@
-﻿using WtsXamarin.ViewModels;
+﻿using WtsXamarin.Core.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace WtsXamarin.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class BlankPage : ContentPage
 	{
         public BlankPage()
