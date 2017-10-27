@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WtsXamarin.Helpers
+namespace WtsXamarin.Core.Helpers
 {
     public class Observable : INotifyPropertyChanged
     {

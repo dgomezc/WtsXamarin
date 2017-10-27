@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WtsXamarin.Models
+namespace WtsXamarin.Core.Models
 {
     public class SampleOrder
     {

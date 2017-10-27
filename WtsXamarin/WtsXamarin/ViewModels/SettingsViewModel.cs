@@ -1,4 +1,4 @@
-﻿using WtsXamarin.Helpers;
+﻿using WtsXamarin.Core.Helpers;
 using WtsXamarin.Services;
 using WtsXamarin.Models;
 

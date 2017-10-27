@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Threading.Tasks;
-using WtsXamarin.Models;
+using WtsXamarin.Core.Models;
 
-namespace WtsXamarin.Services
+namespace WtsXamarin.Core.Services
 {
     public static class SampleDataService
     {

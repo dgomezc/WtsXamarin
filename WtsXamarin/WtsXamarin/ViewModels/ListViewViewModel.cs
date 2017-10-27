@@ -1,7 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using WtsXamarin.Helpers;
-using WtsXamarin.Models;
-using WtsXamarin.Services;
+using WtsXamarin.Core.Helpers;
+using WtsXamarin.Core.Models;
+using WtsXamarin.Core.Services;
 
 namespace WtsXamarin.ViewModels
 {

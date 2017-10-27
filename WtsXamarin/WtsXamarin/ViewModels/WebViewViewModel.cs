@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Windows.Input;
-using WtsXamarin.Helpers;
+using WtsXamarin.Core.Helpers;
 
 namespace WtsXamarin.ViewModels
 {

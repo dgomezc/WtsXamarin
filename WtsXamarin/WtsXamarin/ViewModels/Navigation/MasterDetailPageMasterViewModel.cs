@@ -1,5 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using WtsXamarin.Helpers;
+using WtsXamarin.Core.Helpers;
 using WtsXamarin.Services;
 using WtsXamarin.Views.Navigation;
 
