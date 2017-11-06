@@ -8,7 +8,6 @@ namespace WtsXamarin.Views.Navigation
     public partial class MasterDetailPageMaster : ContentPage
     {
         public ListView PrimaryListView;
-        public ListView SecondaryListView;
 
         public MasterDetailPageMaster()
         {
@@ -16,7 +15,6 @@ namespace WtsXamarin.Views.Navigation
 
             BindingContext = new MasterDetailPageMasterViewModel();
             PrimaryListView = PrimaryMenuItemsListView;
-            SecondaryListView = SecondaryMenuItemsListView;
         }
     }
 }

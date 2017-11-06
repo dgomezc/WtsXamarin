@@ -50,14 +50,7 @@
                   HasUnevenRows="true"
                   ItemsSource="{Binding PrimaryMenuItems}"
                       Header="{DynamicResource MenuHeaderTemplate}"
-                      ItemTemplate="{StaticResource MenuItemTemplate}">                    
-                </ListView>
-            <ListView x:Name="SecondaryMenuItemsListView"
-                      VerticalOptions="End"
-                      SeparatorVisibility="None" 
-                      HasUnevenRows="true"
-                      ItemsSource="{Binding SecondaryMenuItems}"
-                      ItemTemplate="{StaticResource MenuItemTemplate}">               
+                      ItemTemplate="{StaticResource MenuItemTemplate}">
             </ListView>
         </StackLayout>
     </ContentPage.Content>

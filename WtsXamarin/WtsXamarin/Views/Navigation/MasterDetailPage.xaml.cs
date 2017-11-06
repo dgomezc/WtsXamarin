@@ -13,7 +13,6 @@ namespace WtsXamarin.Views.Navigation
             InitializeComponent();
 
             MasterPage.PrimaryListView.ItemSelected += ListView_ItemSelected;
-            MasterPage.SecondaryListView.ItemSelected += ListView_ItemSelected;
 
             if (Device.RuntimePlatform == Device.UWP)
             {
@@ -32,17 +31,6 @@ namespace WtsXamarin.Views.Navigation
 
             Detail = new NavigationPage(page);
             IsPresented = false;
-
-            DisableMenuItem(sender as ListView);
-        }
-
-        private void DisableMenuItem(ListView listView)
-        {
-            if(listView == MasterPage.PrimaryListView)
-                MasterPage.SecondaryListView.SelectedItem = null;
-
-            else if(listView == MasterPage.SecondaryListView)
-                MasterPage.PrimaryListView.SelectedItem = null;
         }
     }
 }
