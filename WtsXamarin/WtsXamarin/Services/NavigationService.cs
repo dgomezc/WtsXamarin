@@ -12,11 +12,12 @@ namespace WtsXamarin.Services
             new MasterDetailPageMenuItem { Id = 1, Title = "Blank", TargetType = typeof(BlankPage), IconSource = "blank.png"},
             new MasterDetailPageMenuItem { Id = 2, Title = "WebView", TargetType = typeof(WebViewPage), IconSource = "blank.png"},
             new MasterDetailPageMenuItem { Id = 3, Title = "ListView", TargetType = typeof(ListViewPage), IconSource = "blank.png"},
+            new MasterDetailPageMenuItem { Id = 4, Title = "Camera", TargetType = typeof(CameraPage), IconSource = "blank.png"},
         };
 
         public static IEnumerable<MasterDetailPageMenuItem> SecondaryNavigationItems = new[]
         {
-            new MasterDetailPageMenuItem { Id = 4, Title = "Settings", TargetType = typeof(SettingsPage), IconSource = "settings.png" },
+            new MasterDetailPageMenuItem { Id = 99, Title = "Settings", TargetType = typeof(SettingsPage), IconSource = "settings.png" },
         };
     }
 }
