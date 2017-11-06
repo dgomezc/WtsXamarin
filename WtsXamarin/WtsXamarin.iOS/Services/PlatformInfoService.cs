@@ -2,10 +2,10 @@
 using WtsXamarin.iOS.Services;
 using WtsXamarin.Services;
 
-[assembly: Xamarin.Forms.Dependency(typeof(PlatformService))]
+[assembly: Xamarin.Forms.Dependency(typeof(PlatformInfoService))]
 namespace WtsXamarin.iOS.Services
 {
-    public class PlatformInfoService : IPlatformService
+    public class PlatformInfoService : IPlatformInfoService
     {
         public string AppName => NSBundle.MainBundle.InfoDictionary["CFBundleName"].ToString();
 
