@@ -1,16 +1,26 @@
-﻿using WtsXamarin.Helpers;
-using WtsXamarin.Services;
+﻿using Plugin.Settings;
+using Plugin.Settings.Abstractions;
+using WtsXamarin.Helpers;
 using WtsXamarin.Models;
+using WtsXamarin.Services;
+using Xamarin.Forms;
 
 namespace WtsXamarin.ViewModels
 {
     public class SettingsViewModel : Observable
     {
+        private readonly ISettings _appSettings;
+        private readonly IPlatformInfoService _platformInfoService;
+
         public SettingsViewModel()
         {
+            _appSettings = CrossSettings.Current;
+            _platformInfoService = DependencyService.Get<IPlatformInfoService>();
+
+            AppName = $"{_platformInfoService.AppName} - {_platformInfoService.AppVersion}";
         }
 
-        public string AppName { get; } = $"{SettingsService.Instance.AppName} - {SettingsService.Instance.AppVersion}";
+        public string AppName { get; }
 
         public string AboutDescription { get; } = "Settings page placeholder text. Your app description goes here.";
 
@@ -18,21 +28,25 @@ namespace WtsXamarin.ViewModels
 
         public bool SampleBoolSetting
         {
-            get => SettingsService.Instance.SampleBoolSetting;
+            get => _appSettings.GetValueOrDefault(nameof(SampleBoolSetting), false);
             set
             {
-                SettingsService.Instance.SampleBoolSetting = value;
-                OnPropertyChanged(nameof(SampleBoolSetting));
+                if(_appSettings.AddOrUpdateValue(nameof(SampleBoolSetting), value))
+                {
+                    OnPropertyChanged(nameof(SampleBoolSetting));
+                }
             }
         }
 
         public SampleProgramOptions SampleEnumSetting
         {
-            get => SettingsService.Instance.SampleEnumSetting;
+            get => (SampleProgramOptions)_appSettings.GetValueOrDefault(nameof(SampleEnumSetting), 0);
             set
             {
-                SettingsService.Instance.SampleEnumSetting = value;
-                OnPropertyChanged(nameof(SampleEnumSetting));
+                if (_appSettings.AddOrUpdateValue(nameof(SampleEnumSetting), (int)value))
+                {
+                    OnPropertyChanged(nameof(SampleEnumSetting));
+                }
             }
         }
     }
