@@ -4,12 +4,18 @@ namespace WtsXamarin
 {
 	public partial class App : Application
 	{
-		public App ()
+        public static NavigationPage NavPage = null;
+
+        public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new Views.Navigation.MasterDetailPage();
-		}
+            NavPage = new NavigationPage(new Views.MainPage());
+            MainPage = new Views.Navigation.MasterDetailPage()
+            {
+                Detail = NavPage
+            };
+        }
 
 		protected override void OnStart ()
 		{
